@@ -1,0 +1,13 @@
+{
+    "full_name": "Carlos de la Guardia",
+    "email": "cguardia@yahoo.com",
+    "github_username": "cguardia",
+    "project_name": "Pyramid Scaffold",
+    "template_engine": ["chameleon", "jinja2", "mako", "none"],
+    "persistence": ["sqlalchemy", "zodb", "none"],
+    "repo_name": "scaffold",
+    "project_short_description": "Pyramid Scaffold contains all the boilerplate you need to create a Pyramid application.",
+    "release_date": "2015-08-11",
+    "year": "2015",
+    "version": "0.1.0"
+}
