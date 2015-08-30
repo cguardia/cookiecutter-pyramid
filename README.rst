@@ -1,6 +1,6 @@
-======================
-cookiecutter-pypackage
-======================
+====================
+cookiecutter-pyramid
+====================
 
 Cookiecutter template for a Pyramid package. See https://github.com/audreyr/cookiecutter.
 
