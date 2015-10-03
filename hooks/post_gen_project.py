@@ -1,7 +1,16 @@
 """ remove template files for all unselected engines and persistence options """
 import os
 import shutil
+import subprocess
+import sys
+
 from textwrap import dedent
+
+try:
+    import virtualenv
+    VIRTUALENV_AVAILABLE = True
+except ImportError:
+    VIRTUALENV_AVAILABLE = False
 
 ENGINES = {'chameleon': 'pt', 'jinja2': 'jinja2', 'mako': 'mako'}
 SELECTED_ENGINE = '{{ cookiecutter.template_engine }}'
@@ -18,6 +27,15 @@ if SELECTED_PERSISTENCE not in PERSISTENCE_OPTIONS:
 
 if SELECTED_PERSISTENCE != 'sqlalchemy':
     shutil.rmtree('./{{ cookiecutter.repo_name }}/scripts')
+
+if VIRTUALENV_AVAILABLE:
+    virtualenv.create_environment('.')
+    proc = subprocess.Popen(
+            ['bin/python', 'setup.py', 'develop'],
+            shell=sys.platform.startswith('win'),
+            cwd='.'
+    )
+    proc.wait()
 
 separator = "=" * 79
 msg = dedent(
