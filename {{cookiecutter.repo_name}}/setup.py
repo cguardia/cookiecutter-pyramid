@@ -44,6 +44,10 @@ install_requires = [
     {% endif -%}
     ]
 
+setup_requires = [
+    'setuptools>=17.1',
+    ]
+
 docs_extras = ['Sphinx']
 testing_extras = ['nose', 'coverage', 'mock', 'virtualenv']
 i18n_extras = ['Babel', 'transifex-client', 'lingua<2.0']
@@ -76,6 +80,7 @@ setup(name='{{ cookiecutter.repo_name }}',
     packages=find_packages(),
     include_package_data=True,
     zip_safe=False,
+    setup_requires=setup_requires,
     install_requires=install_requires,
     tests_require=install_requires,
     test_suite="{{ cookiecutter.repo_name }}",
