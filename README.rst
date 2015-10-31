@@ -4,6 +4,8 @@ cookiecutter-pyramid
 
 Cookiecutter template for a Pyramid package. See https://github.com/audreyr/cookiecutter.
 
+* Pick template engine and persistence backend
+* Virtualenv automatically created and setup in development mode
 * Free software: BSD license
 * Travis-CI_: Ready for Travis Continuous Integration testing
 * Tox_ testing: Setup to easily test for Python 2.6, 2.7, 3.3, 3.4
@@ -12,13 +14,11 @@ Cookiecutter template for a Pyramid package. See https://github.com/audreyr/cook
 Usage
 -----
 
-Generate a Python package project::
+Generate a Pyramid project::
 
-    cookiecutter https://github.com/cguardia/cookiecutter-pyramid.git
+    cookiecutter https://github.com/cguardia/cookiecutter-pyramid.git <project-name>
 
 Then:
 
-* Create a repo and put it there.
-* Add the repo to your Travis CI account.
-* Add the repo to your ReadTheDocs account + turn on the ReadTheDocs service hook.
-* Release your package the standard Python way. Here's a release checklist: https://gist.github.com/audreyr/5990987
+* cd to <project-name>
+* Run bin/pserve development.ini
