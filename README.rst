@@ -16,9 +16,9 @@ Usage
 
 Generate a Pyramid project::
 
-    cookiecutter https://github.com/cguardia/cookiecutter-pyramid.git <project-name>
+    cookiecutter https://github.com/cguardia/cookiecutter-pyramid.git
 
 Then:
 
-* cd to <project-name>
+* cd to project name given in the last cookicutter question
 * Run bin/pserve development.ini
