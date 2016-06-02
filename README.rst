@@ -20,5 +20,5 @@ Generate a Pyramid project::
 
 Then:
 
-* cd to project name given in the last cookicutter question
+* cd to project name given in the last cookiecutter question
 * Run bin/pserve development.ini
